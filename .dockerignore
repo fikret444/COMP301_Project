@@ -1,0 +1,11 @@
+**/target/
+**/node_modules/
+**/.git/
+**/.gitignore
+**/.DS_Store
+**/README.md
+**/*.md
+**/.mvn/
+**/mvnw
+**/mvnw.cmd
+
