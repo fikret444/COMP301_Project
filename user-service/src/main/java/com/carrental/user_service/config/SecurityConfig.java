@@ -16,12 +16,14 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
             .csrf(csrf -> csrf.disable()) // API güvenliğini basitleştir
+            .sessionManagement(session -> session.sessionCreationPolicy(org.springframework.security.config.http.SessionCreationPolicy.STATELESS)) // Session kullanma
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/auth/**").permitAll() // Login/Register serbest
-                .anyRequest().authenticated() // Gerisi yasak
+                .anyRequest().permitAll() // Test için tüm endpoint'leri aç (production'da authenticated yap)
             )
             .httpBasic(httpBasic -> httpBasic.disable()) // Basic auth'u kapat
-            .formLogin(formLogin -> formLogin.disable()); // Form login'i kapat
+            .formLogin(formLogin -> formLogin.disable()) // Form login'i kapat
+            .logout(logout -> logout.disable()); // Logout'u kapat
         
         return http.build();
     }
