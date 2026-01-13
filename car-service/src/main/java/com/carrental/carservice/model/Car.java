@@ -9,6 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.math.BigDecimal;
 
 @Document(collection = "cars")
@@ -30,6 +31,7 @@ public class Car {
     
     @NotNull(message = "Günlük fiyat boş olamaz")
     @DecimalMin(value = "0.01", message = "Günlük fiyat 0'dan büyük olmalıdır")
+    @JsonProperty("pricePerDay")
     private BigDecimal dailyPrice;
     
     private boolean isAvailable;

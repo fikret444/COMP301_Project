@@ -24,6 +24,12 @@ public class CarController {
         return carRepository.findAll();
     }
 
+    @GetMapping("/{id}")
+    public Car getCarById(@PathVariable String id) {
+        return carRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Car not found with id: " + id));
+    }
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Car createCar(@Valid @RequestBody Car car) {
