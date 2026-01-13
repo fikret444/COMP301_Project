@@ -6,5 +6,5 @@ COPY target/*.jar car-service.jar
 
 EXPOSE 8081
 
-ENTRYPOINT ["java", "-jar", "car-service.jar"]
+ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar car-service.jar"]
 
