@@ -1,0 +1,4 @@
+com\carrental\user_service\UserServiceApplicationTests.class
+com\carrental\user_service\repository\UserRepositoryTest.class
+com\carrental\user_service\controller\AuthControllerTest.class
+com\carrental\user_service\service\UserServiceTest.class

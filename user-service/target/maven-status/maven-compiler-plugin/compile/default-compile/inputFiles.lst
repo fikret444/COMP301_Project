@@ -1,0 +1,12 @@
+C:\Users\GAME\Desktop\comp301\COMP301_Project\user-service\src\main\java\com\carrental\user_service\config\OpenApiConfig.java
+C:\Users\GAME\Desktop\comp301\COMP301_Project\user-service\src\main\java\com\carrental\user_service\config\SecurityConfig.java
+C:\Users\GAME\Desktop\comp301\COMP301_Project\user-service\src\main\java\com\carrental\user_service\controller\AuthController.java
+C:\Users\GAME\Desktop\comp301\COMP301_Project\user-service\src\main\java\com\carrental\user_service\dto\LoginRequest.java
+C:\Users\GAME\Desktop\comp301\COMP301_Project\user-service\src\main\java\com\carrental\user_service\dto\RegisterRequest.java
+C:\Users\GAME\Desktop\comp301\COMP301_Project\user-service\src\main\java\com\carrental\user_service\exception\GlobalExceptionHandler.java
+C:\Users\GAME\Desktop\comp301\COMP301_Project\user-service\src\main\java\com\carrental\user_service\model\Role.java
+C:\Users\GAME\Desktop\comp301\COMP301_Project\user-service\src\main\java\com\carrental\user_service\model\User.java
+C:\Users\GAME\Desktop\comp301\COMP301_Project\user-service\src\main\java\com\carrental\user_service\repository\UserRepository.java
+C:\Users\GAME\Desktop\comp301\COMP301_Project\user-service\src\main\java\com\carrental\user_service\service\JwtService.java
+C:\Users\GAME\Desktop\comp301\COMP301_Project\user-service\src\main\java\com\carrental\user_service\service\UserService.java
+C:\Users\GAME\Desktop\comp301\COMP301_Project\user-service\src\main\java\com\carrental\user_service\UserServiceApplication.java

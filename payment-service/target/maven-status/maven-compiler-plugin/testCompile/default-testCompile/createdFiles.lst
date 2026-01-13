@@ -1,1 +1,4 @@
+com\carrental\payment_service\repository\PaymentRepositoryTest.class
+com\carrental\payment_service\service\PaymentServiceTest.class
+com\carrental\payment_service\controller\PaymentControllerTest.class
 com\carrental\payment_service\PaymentServiceApplicationTests.class

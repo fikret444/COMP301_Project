@@ -3,11 +3,13 @@ com\carrental\rental_service\client\PaymentServiceClient.class
 com\carrental\rental_service\client\CarServiceClient.class
 com\carrental\rental_service\model\Rental.class
 com\carrental\rental_service\dto\RentalResponse.class
+com\carrental\rental_service\exception\GlobalExceptionHandler.class
 com\carrental\rental_service\model\RentalStatus.class
 com\carrental\rental_service\controller\RentalController.class
 com\carrental\rental_service\dto\PaymentRequest.class
 com\carrental\rental_service\repository\RentalRepository.class
 com\carrental\rental_service\dto\CarDto.class
+com\carrental\rental_service\config\OpenApiConfig.class
 com\carrental\rental_service\dto\PaymentResponse.class
 com\carrental\rental_service\service\RentalService.class
 com\carrental\rental_service\RentalServiceApplication.class

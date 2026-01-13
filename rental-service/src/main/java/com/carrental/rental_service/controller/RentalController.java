@@ -4,14 +4,17 @@ import com.carrental.rental_service.dto.RentalRequest;
 import com.carrental.rental_service.dto.RentalResponse;
 import com.carrental.rental_service.model.RentalStatus;
 import com.carrental.rental_service.service.RentalService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/rentals")
+@Validated
 public class RentalController {
 
     private final RentalService rentalService;
@@ -21,7 +24,7 @@ public class RentalController {
     }
 
     @PostMapping
-    public ResponseEntity<RentalResponse> createRental(@RequestBody RentalRequest request) {
+    public ResponseEntity<RentalResponse> createRental(@Valid @RequestBody RentalRequest request) {
         try {
             RentalResponse response = rentalService.createRental(request);
             return ResponseEntity.status(HttpStatus.CREATED).body(response);
@@ -80,4 +83,3 @@ public class RentalController {
         }
     }
 }
-

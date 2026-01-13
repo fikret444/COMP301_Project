@@ -3,14 +3,17 @@ package com.carrental.payment_service.controller;
 import com.carrental.payment_service.dto.PaymentRequest;
 import com.carrental.payment_service.dto.PaymentResponse;
 import com.carrental.payment_service.service.PaymentService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/payments")
+@Validated
 public class PaymentController {
 
     private final PaymentService paymentService;
@@ -20,7 +23,7 @@ public class PaymentController {
     }
 
     @PostMapping("/process")
-    public ResponseEntity<PaymentResponse> processPayment(@RequestBody PaymentRequest request) {
+    public ResponseEntity<PaymentResponse> processPayment(@Valid @RequestBody PaymentRequest request) {
         try {
             PaymentResponse response = paymentService.processPayment(request);
             return ResponseEntity.status(HttpStatus.CREATED).body(response);
@@ -71,4 +74,3 @@ public class PaymentController {
         }
     }
 }
-

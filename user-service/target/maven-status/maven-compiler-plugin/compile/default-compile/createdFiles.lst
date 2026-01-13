@@ -1,0 +1,12 @@
+com\carrental\user_service\repository\UserRepository.class
+com\carrental\user_service\config\SecurityConfig.class
+com\carrental\user_service\dto\RegisterRequest.class
+com\carrental\user_service\model\User.class
+com\carrental\user_service\service\UserService.class
+com\carrental\user_service\dto\LoginRequest.class
+com\carrental\user_service\service\JwtService.class
+com\carrental\user_service\controller\AuthController.class
+com\carrental\user_service\config\OpenApiConfig.class
+com\carrental\user_service\model\Role.class
+com\carrental\user_service\UserServiceApplication.class
+com\carrental\user_service\exception\GlobalExceptionHandler.class
