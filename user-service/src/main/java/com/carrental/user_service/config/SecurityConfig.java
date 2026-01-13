@@ -19,7 +19,9 @@ public class SecurityConfig {
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers("/api/auth/**").permitAll() // Login/Register serbest
                 .anyRequest().authenticated() // Gerisi yasak
-            );
+            )
+            .httpBasic(httpBasic -> httpBasic.disable()) // Basic auth'u kapat
+            .formLogin(formLogin -> formLogin.disable()); // Form login'i kapat
         
         return http.build();
     }
