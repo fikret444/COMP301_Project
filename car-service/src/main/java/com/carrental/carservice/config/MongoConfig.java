@@ -17,9 +17,10 @@ public class MongoConfig {
     public MongoClient mongoClient() {
         // Environment variable'dan MongoDB URI al
         String uri = System.getenv("SPRING_DATA_MONGODB_URI");
-        if (uri == null || uri.isEmpty()) {
-            uri = "mongodb://mongodb:27017/car-db"; // Default Docker hostname
+        if (uri == null || uri.isEmpty() || uri.trim().isEmpty()) {
+            throw new IllegalStateException("SPRING_DATA_MONGODB_URI environment variable is required but not set!");
         }
+        uri = uri.trim(); // Başında/sonunda boşluk varsa temizle
         System.out.println("🔧 MONGO CONFIG: Connecting to " + uri);
         return MongoClients.create(uri);
     }
