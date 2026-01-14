@@ -5,9 +5,11 @@ import com.mongodb.client.MongoClients;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.data.mongodb.core.MongoTemplate;
 
 @Configuration
+@Profile("!test") // Test ortamında devre dışı (Spring Boot Embedded MongoDB kullanır)
 public class MongoConfig {
 
     @Value("${MONGODB_URI:mongodb://localhost:27017/car-db}")

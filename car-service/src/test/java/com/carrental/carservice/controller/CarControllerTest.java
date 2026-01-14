@@ -120,7 +120,7 @@ class CarControllerTest {
                 .andExpect(jsonPath("$.brand").value("BMW"))
                 .andExpect(jsonPath("$.model").value("320i"))
                 .andExpect(jsonPath("$.year").value(2024))
-                .andExpect(jsonPath("$.dailyPrice").value(750.00))
+                .andExpect(jsonPath("$.pricePerDay").value(750.00))
                 .andExpect(jsonPath("$.available").value(true));
 
         verify(carRepository, times(1)).save(any(Car.class));
